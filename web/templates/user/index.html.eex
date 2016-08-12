@@ -1,0 +1,22 @@
+<h1> Watch User</h1>
+  <table class="table table-bordered table-responsive">
+    <tr>
+  <th>
+    Name
+  </th>
+  <th>
+    Action
+  </th>
+    </tr>
+  <%= for user <- @users do %>
+  <tr>
+  <td><b><%= first_name(user) %></b> (<%= user.id %>)</td>
+   <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
+  </tr>
+  <%= end %>
+  </table>
+  <form class="" action="index.html" method="post">
+  <%= #select form, :name, itemGet(@users), class: "form-control"
+  select(nil, :id, itemGet(@users),  prompt: "Choose your Name", class: "form-control" )
+  %>
+  </form>

@@ -1,0 +1,3 @@
+<h2>Show service</h2>
+
+<h1>Hellow world ! Here we go <%= String.capitalize @name  %> </h1>
